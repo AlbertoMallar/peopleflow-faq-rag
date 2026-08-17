@@ -1,0 +1,195 @@
+# PeopleFlow — Base de conocimiento de RR.HH.
+
+Este documento reúne políticas operativas y preguntas frecuentes de PeopleFlow, una plataforma ficticia de gestión de Recursos Humanos. Su objetivo es servir como fuente de conocimiento para un asistente RAG. Las respuestas del sistema deben basarse únicamente en la información contenida en este documento. Cuando una política dependa del país, convenio o configuración de la empresa, PeopleFlow mostrará la regla local vigente y no deberá inferirse una condición que no esté expresamente documentada.
+
+## Acceso y contraseñas
+
+Para restablecer una contraseña, la persona debe seleccionar “Olvidé mi contraseña” en la pantalla de inicio de sesión. PeopleFlow envía un enlace de un solo uso al correo laboral registrado. El enlace vence a los treinta minutos y deja de ser válido inmediatamente después de utilizarse. Si el correo no llega, soporte debe verificar que la cuenta exista, que la dirección registrada sea correcta, que el dominio de correo no haya rechazado el mensaje y que la cuenta no se encuentre bloqueada.
+
+Una cuenta se bloquea temporalmente después de cinco intentos fallidos consecutivos. Un administrador autorizado puede desbloquearla desde Seguridad > Usuarios bloqueados. Soporte nunca debe solicitar la contraseña actual del empleado ni enviar contraseñas por correo, chat o tickets. Si la persona ya no tiene acceso a su correo laboral, la identidad debe verificarse por el procedimiento interno antes de cambiar la dirección asociada a la cuenta.
+
+## Autenticación multifactor
+
+La autenticación multifactor, o MFA, puede ser obligatoria para administradores y opcional para otros roles según la política de cada organización. Cuando está habilitada, el usuario inicia sesión con su contraseña y luego confirma un segundo factor mediante la aplicación autenticadora configurada. Los códigos de recuperación se muestran una sola vez durante el alta y deben almacenarse de forma segura.
+
+Si una persona pierde el dispositivo utilizado como segundo factor, no debe desactivarse MFA sin una verificación de identidad previa. Un administrador de seguridad puede reiniciar la configuración desde Seguridad > MFA, pero la acción queda registrada en auditoría. Después del reinicio, el usuario deberá registrar un nuevo dispositivo en su siguiente inicio de sesión. PeopleFlow no permite que soporte vea códigos MFA, secretos de autenticación ni códigos de recuperación existentes.
+
+## Usuarios y roles
+
+Los administradores crean usuarios desde Configuración > Usuarios > Nuevo usuario. Cada usuario debe tener nombre, apellido, correo laboral, país y rol. Los roles estándar son Administrador, Líder y Colaborador. El rol Administrador gestiona configuración, usuarios, integraciones y auditoría. El rol Líder consulta la información de su equipo, aprueba solicitudes y accede a reportes de su jerarquía. El rol Colaborador consulta su perfil, solicita ausencias y descarga los documentos habilitados para su cuenta.
+
+Los permisos se heredan desde el rol para evitar configuraciones inconsistentes. Cuando una persona cambia de función, RR.HH. debe actualizar el rol y revisar que no conserve permisos que ya no necesita. Un líder no puede asignarse permisos de administrador a sí mismo. Los cambios de rol, altas, bajas y modificaciones de permisos quedan registrados con fecha, usuario que realizó la acción y valor anterior y nuevo.
+
+## Perfil del empleado y datos personales
+
+Cada empleado puede consultar su perfil desde Mi perfil. Allí se muestran datos laborales, datos de contacto, fecha de ingreso, país, área, líder directo y campos adicionales configurados por la empresa. Algunos campos pueden ser editados por el propio empleado y otros requieren intervención de RR.HH. Los cambios en nombre legal, documento de identidad o datos bancarios pueden requerir documentación respaldatoria.
+
+PeopleFlow distingue entre datos visibles para el empleado, datos visibles para su líder y datos restringidos a RR.HH. Un líder no debe acceder a información médica, documentos de identidad ni datos bancarios salvo que exista un permiso específico. Cuando se modifica un dato sensible, el sistema registra el cambio en auditoría. Si la organización utiliza una integración con nómina, ciertos campos pueden quedar bloqueados porque su fuente de verdad es el sistema externo.
+
+## Onboarding
+
+El onboarding comienza cuando RR.HH. crea o importa un nuevo empleado con una fecha de ingreso futura o actual. PeopleFlow genera una lista de tareas según país, área, tipo de contratación y plantilla de onboarding asignada. Las tareas pueden incluir completar datos personales, leer políticas, cargar documentos, aceptar declaraciones y asistir a reuniones.
+
+Cada tarea tiene un responsable y, opcionalmente, una fecha límite. El líder debe completar la primera reunión durante los primeros cinco días laborales, salvo que la plantilla local establezca otro plazo. RR.HH. puede seguir el avance desde el tablero de Onboarding y reenviar recordatorios. Los documentos sensibles solo pueden cargarse desde una sesión autenticada.
+
+Si una persona cambia de área antes de finalizar el onboarding, RR.HH. puede reasignar tareas pendientes. Las tareas ya completadas no se eliminan; quedan registradas para mantener trazabilidad. Un onboarding se considera finalizado cuando todas las tareas obligatorias están completas o fueron cerradas mediante una excepción documentada.
+
+## Documentos del empleado
+
+Los documentos laborales se gestionan desde Personas > Documentos. RR.HH. puede solicitar archivos específicos por tipo, por ejemplo contrato firmado, constancia fiscal, identificación o certificado requerido por una política local. Cada tipo documental puede tener fecha de vencimiento, visibilidad restringida y reglas de obligatoriedad.
+
+Cuando un documento está próximo a vencer, PeopleFlow puede enviar recordatorios al empleado y a RR.HH. según la configuración de notificaciones. Los líderes no acceden automáticamente a documentos sensibles. Si un archivo es reemplazado, el sistema conserva la información de auditoría de la versión anterior aunque la interfaz muestre solamente la versión vigente.
+
+Un documento marcado como obligatorio puede impedir que una tarea de onboarding se complete. Si el archivo cargado es ilegible, incorrecto o corresponde a otra categoría, RR.HH. puede rechazarlo indicando un motivo. El empleado recibe una notificación y puede cargar una nueva versión.
+
+## Vacaciones
+
+Las vacaciones se solicitan desde Mi tiempo > Nueva solicitud. El sistema calcula el saldo disponible según país, antigüedad, política asignada y movimientos previamente registrados. La solicitud debe indicar fecha de inicio y fecha de finalización. Antes de enviarla, PeopleFlow muestra la cantidad de días que se descontará y advierte si existe un conflicto con una ausencia ya registrada.
+
+La solicitud llega al líder directo y queda aprobada únicamente después de su confirmación. Si el líder tiene un aprobador delegado activo, la tarea se deriva de acuerdo con las reglas de delegación. Una solicitud aprobada puede cancelarse hasta cuarenta y ocho horas antes de la fecha de inicio, salvo que la política local determine otro plazo. Cuando ya comenzó el período solicitado, la cancelación requiere intervención de RR.HH.
+
+PeopleFlow no permite aprobar una solicitud si el saldo resultante viola una restricción configurada, a menos que RR.HH. tenga habilitada una excepción. Toda excepción debe incluir motivo y queda registrada en auditoría.
+
+## Saldo de vacaciones y ajustes
+
+El saldo de vacaciones se compone de acreditaciones, consumos, ajustes y, cuando corresponda, arrastres de períodos anteriores. El empleado puede consultar el detalle desde Mi tiempo > Saldos. Un saldo negativo solo es posible cuando la política asignada permite anticipar días futuros.
+
+RR.HH. puede realizar ajustes manuales para corregir migraciones, errores históricos o situaciones autorizadas. Cada ajuste debe indicar cantidad, fecha efectiva y motivo. Los líderes pueden consultar el saldo de su equipo si cuentan con permiso, pero no pueden modificarlo.
+
+Si la política de vacaciones cambia, el efecto sobre saldos existentes depende de la configuración de vigencia. PeopleFlow no recalcula automáticamente períodos históricos cuando una nueva política comienza a regir, salvo que RR.HH. ejecute un proceso de recálculo explícito. Ante diferencias entre el saldo mostrado y los registros históricos, soporte debe revisar movimientos y política asignada antes de modificar valores.
+
+## Licencias médicas y familiares
+
+Las licencias médicas y familiares se solicitan desde Mi tiempo seleccionando el tipo correspondiente. La documentación requerida depende de la política local. El empleado puede cargar los comprobantes solicitados y RR.HH. debe validarlos antes de que determinados tipos de licencia se consideren completamente aprobados.
+
+El líder puede ver el período solicitado, el estado de la ausencia y la información necesaria para organizar el trabajo, pero no puede acceder a documentación médica restringida. Si falta un comprobante obligatorio, PeopleFlow marca la solicitud como pendiente y envía una notificación al empleado. Una licencia pendiente no debe interpretarse automáticamente como rechazada.
+
+Los documentos médicos se almacenan con permisos restringidos. Si una licencia necesita corrección de fechas después de ser aprobada, RR.HH. debe registrar el cambio y conservar la trazabilidad. Las reglas de duración, remuneración y documentación dependen de la política local configurada y no deben inferirse a partir de otras jurisdicciones.
+
+## Otras ausencias y permisos
+
+Además de vacaciones y licencias, una organización puede configurar permisos por estudio, mudanza, trámites, duelo, matrimonio u otros motivos. Cada tipo de ausencia define si consume saldo, si requiere aprobación, si exige documentación y qué personas pueden visualizar el motivo.
+
+Cuando una ausencia no requiere aprobación, puede quedar confirmada inmediatamente después de enviarse. Si requiere aprobación, sigue el flujo asignado a la política. Los tipos de ausencia con información sensible pueden mostrar al líder únicamente que la persona no estará disponible, sin exponer el detalle del motivo.
+
+RR.HH. puede desactivar un tipo de ausencia para nuevas solicitudes sin eliminar registros históricos. Si un empleado intenta solicitar un tipo que no está disponible para su país o política, PeopleFlow debe informar que no se encuentra habilitado y mostrar solamente las opciones vigentes para esa persona.
+
+## Aprobaciones y delegaciones
+
+PeopleFlow utiliza flujos de aprobación para vacaciones, licencias, cambios de datos y otros procesos configurables. Por defecto, las solicitudes de tiempo libre se envían al líder directo. Una organización puede definir pasos adicionales, por ejemplo una segunda aprobación de RR.HH. para determinados tipos de ausencia.
+
+Un líder puede delegar temporalmente sus aprobaciones indicando persona reemplazante, fecha de inicio y fecha de finalización. La delegación afecta solamente las tareas generadas durante su vigencia, salvo que la configuración indique lo contrario. El delegado debe tener permisos suficientes para actuar sobre esas solicitudes.
+
+Si no existe un aprobador válido, la solicitud no debe quedar perdida. PeopleFlow la marca para revisión y notifica a RR.HH. Los administradores pueden reasignar manualmente una tarea pendiente. Cada aprobación, rechazo, delegación y reasignación conserva fecha, actor y comentario opcional para auditoría.
+
+## Control horario y registro de jornada
+
+Cuando el módulo de tiempo está habilitado, los empleados pueden registrar horas trabajadas mediante entradas manuales o integraciones autorizadas. Cada registro contiene fecha, hora de inicio, hora de finalización y, cuando corresponde, proyecto o centro de costo. Las reglas de redondeo y descansos dependen de la configuración de la organización.
+
+Los empleados pueden corregir registros dentro del período permitido. Una corrección posterior al cierre puede requerir aprobación del líder o de RR.HH. Los líderes visualizan únicamente los equipos bajo su jerarquía. El sistema debe evitar que un registro termine antes de comenzar o que existan períodos incompatibles según las reglas configuradas.
+
+PeopleFlow no calcula por sí mismo consecuencias legales o salariales no configuradas. Cuando existe integración con un sistema de nómina, el cierre de jornada puede generar un archivo o sincronización que luego será procesado por dicho sistema externo.
+
+## Recibos y comprobantes de nómina
+
+Los recibos se consultan desde Mi perfil > Recibos cuando la organización tiene habilitado el módulo correspondiente. PeopleFlow puede recibir archivos desde una integración de nómina o mediante una carga autorizada de RR.HH. Cada recibo queda asociado a un empleado y a un período.
+
+Un colaborador solo puede acceder a sus propios recibos. Un líder no obtiene acceso a los recibos de su equipo por el solo hecho de ser líder. Los administradores tampoco deben descargar documentación salarial si su rol no incluye el permiso específico.
+
+Si un recibo no aparece, soporte debe revisar primero si el período fue publicado, si el empleado está correctamente asociado y si la sincronización finalizó sin errores. PeopleFlow no debe crear valores salariales faltantes ni inferir importes a partir de períodos anteriores. Las correcciones deben realizarse en la fuente autorizada y luego sincronizarse nuevamente.
+
+## Importación masiva por CSV
+
+La importación masiva de empleados se realiza desde Administración > Importar empleados. El archivo debe utilizar formato CSV UTF-8 e incluir las columnas obligatorias definidas por la plantilla, entre ellas nombre, apellido, correo, país, fecha_ingreso y rol. La plantilla descargable desde PeopleFlow debe utilizarse como referencia para nombres de columnas y formatos.
+
+Antes de confirmar, el sistema muestra una vista previa y clasifica las filas en válidas, inválidas o potencialmente actualizables. Un correo laboral ya existente no crea automáticamente un duplicado; la fila se informa para revisión o actualización según el modo seleccionado. Los errores de una fila no deben impedir necesariamente procesar las demás.
+
+Al finalizar, PeopleFlow genera un reporte con filas creadas, actualizadas y rechazadas, junto con el motivo de cada rechazo. Para cargas grandes se recomienda conservar el archivo fuente y el reporte de resultado hasta verificar que la importación sea correcta.
+
+## Exportaciones
+
+Las exportaciones se encuentran disponibles únicamente para usuarios con permiso específico. Dependiendo del módulo, PeopleFlow permite exportar listados de empleados, ausencias, reportes o resultados de procesos en CSV. Los filtros visibles en pantalla se aplican antes de generar el archivo.
+
+Una exportación puede contener datos personales, por lo que el permiso de visualización no implica necesariamente permiso de exportación. El evento queda registrado en auditoría con usuario, fecha, módulo y tipo de exportación. Los archivos generados deben almacenarse de acuerdo con las políticas internas de la organización.
+
+Si un usuario no ve el botón Exportar, soporte debe comprobar su rol y permisos antes de asumir que existe un error técnico. Cuando el conjunto de datos es muy grande, la generación puede ejecutarse en segundo plano y el usuario recibe una notificación cuando el archivo está disponible.
+
+## Reportes y analítica
+
+Los reportes de dotación, ausentismo, vacaciones y otros indicadores se consultan desde Analítica. Los administradores con permisos acceden a reportes globales y los líderes solamente a información correspondiente a su jerarquía. Los filtros por país, área, período u otras dimensiones deben aplicarse antes de interpretar el resultado.
+
+Los datos analíticos se actualizan mediante procesos programados y la pantalla muestra la fecha de última actualización. Por este motivo, una modificación realizada hace pocos minutos puede aparecer en la ficha de un empleado pero todavía no estar reflejada en un reporte consolidado.
+
+Si un número del reporte parece incorrecto, soporte debe verificar filtros, fecha de actualización y alcance de permisos antes de escalar el incidente. La exportación de un reporte conserva los filtros aplicados. Los reportes históricos no deben modificarse manualmente para “hacer coincidir” un resultado sin identificar primero la fuente de la diferencia.
+
+## Notificaciones
+
+PeopleFlow envía notificaciones dentro de la aplicación y, cuando está habilitado, por correo electrónico. Cada usuario puede elegir ciertos recordatorios opcionales, pero los mensajes obligatorios de seguridad, cambios críticos y cumplimiento no pueden desactivarse desde las preferencias personales.
+
+Los administradores configuran plantillas de bienvenida, vencimiento de documentos, recordatorios de aprobación y otros eventos. Si un correo rebota, PeopleFlow conserva el evento de entrega en auditoría y recomienda verificar la dirección registrada. Un rebote no significa necesariamente que la acción de negocio haya fallado; por ejemplo, una solicitud puede estar correctamente creada aunque el correo de aviso no haya llegado.
+
+Para evitar duplicados, los sistemas integrados no deberían reenviar la misma notificación si PeopleFlow ya es responsable de ese evento. La preferencia de idioma utilizada depende de la configuración disponible para el usuario y de la plantilla publicada.
+
+## Integraciones
+
+Las integraciones se gestionan desde Configuración > Integraciones. Cada integración utiliza credenciales propias y debe ser autorizada por un administrador con permisos suficientes. PeopleFlow registra estado, fecha de última sincronización y errores de ejecución.
+
+Una integración puede pausarse sin eliminar su configuración. Mientras está pausada no sincroniza datos nuevos, pero conserva historial y parámetros. Al desconectarla, PeopleFlow deja de ejecutar sincronizaciones futuras; los datos ya incorporados no se eliminan automáticamente.
+
+Cuando una sincronización falla, soporte debe distinguir errores de autenticación, datos inválidos, disponibilidad del proveedor y conflictos de mapeo. Reintentar sin revisar la causa puede repetir el error. Si la integración utiliza un sistema externo como fuente de verdad para determinados campos, las correcciones deben realizarse en ese sistema y no directamente en PeopleFlow, salvo que la documentación de la integración indique otra cosa.
+
+## Sincronización y conflictos de datos
+
+Cuando dos sistemas intercambian información, cada campo debe tener una fuente de verdad definida. Por ejemplo, una empresa puede establecer que el sistema de nómina sea la fuente de datos bancarios y PeopleFlow la fuente de información de onboarding. Si un campo gestionado externamente se edita en PeopleFlow, la siguiente sincronización puede reemplazar el cambio.
+
+PeopleFlow registra errores de sincronización y, cuando es posible, identifica el registro afectado. Un conflicto no debe resolverse copiando datos manualmente sin comprender qué sistema controla el campo. Soporte debe revisar el mapeo, la dirección de sincronización y la marca de tiempo de las últimas operaciones.
+
+Las integraciones pueden procesar registros por lotes. Un lote parcialmente fallido puede contener elementos exitosos y rechazados. Antes de ejecutar una sincronización completa nuevamente, conviene revisar el reporte para evitar duplicar operaciones ya procesadas.
+
+## Seguridad y auditoría
+
+La auditoría registra eventos relevantes como creación y desactivación de usuarios, cambios de rol, exportaciones, inicios de sesión, reinicios de MFA, modificaciones de configuración y acciones administrativas. Los eventos incluyen fecha, usuario, acción y origen cuando esa información está disponible.
+
+Solo administradores autorizados pueden consultar el registro completo. La existencia de permisos administrativos no habilita a modificar o eliminar eventos históricos de auditoría. Ante un incidente de acceso, soporte debe revisar la auditoría antes de cambiar permisos, restaurar una cuenta o asumir que hubo una falla de la plataforma.
+
+Las acciones de soporte que modifiquen acceso o datos sensibles deben poder asociarse a un ticket o motivo interno. La auditoría ayuda a reconstruir qué ocurrió, pero no reemplaza controles preventivos como permisos mínimos, MFA y revisión periódica de accesos.
+
+## Privacidad y acceso a información sensible
+
+PeopleFlow aplica permisos por rol y alcance para reducir el acceso innecesario a información personal. Los usuarios solo deben acceder a los datos requeridos por su función. Documentos médicos, información bancaria, identificadores personales y datos equivalentes pueden estar sujetos a restricciones adicionales.
+
+Cuando una persona solicita acceso, corrección o eliminación de información, RR.HH. debe seguir la política interna y las obligaciones aplicables a la organización. PeopleFlow puede aportar herramientas para localizar o exportar registros, pero el sistema no debe decidir por sí solo si una solicitud legal corresponde.
+
+Los entornos de prueba no deberían contener copias innecesarias de datos personales reales. Las exportaciones con información sensible deben manejarse de acuerdo con las reglas internas. Un error de permisos o exposición accidental debe tratarse como incidente y escalarse por el canal de seguridad definido.
+
+## Offboarding y baja de usuarios
+
+El offboarding comienza cuando RR.HH. registra una fecha de egreso o inicia el proceso de baja. La plantilla puede incluir devolución de activos, transferencia de tareas, documentación final y revisión de accesos. Las tareas se asignan a responsables y pueden tener fechas límite relativas al último día de trabajo.
+
+La desactivación de la cuenta impide nuevos inicios de sesión, pero no elimina automáticamente el historial del empleado. Registros de auditoría, solicitudes aprobadas y otros datos necesarios para trazabilidad pueden conservarse según la política de la organización.
+
+Antes de desactivar a una persona que actúa como líder, RR.HH. debe revisar aprobaciones pendientes y reasignar el equipo cuando corresponda. Si existen integraciones, la baja puede sincronizarse con sistemas externos según la configuración. Eliminar manualmente al empleado para “dar de baja” su acceso no es el procedimiento recomendado porque puede perder referencias históricas.
+
+## Soporte y escalamiento de incidentes
+
+Las consultas funcionales deben comenzar identificando usuario afectado, módulo, acción intentada y mensaje de error, sin solicitar contraseñas ni secretos. Soporte debe comprobar configuración, permisos, estado de integraciones y auditoría antes de modificar datos.
+
+Un incidente debe escalarse cuando existe impacto generalizado, posible exposición de información, pérdida de datos, fallas repetidas sin causa identificada o indisponibilidad de una función crítica. Para errores individuales, se recomienda reproducir el problema con datos no sensibles cuando sea posible.
+
+Los tickets deben incluir pasos observados, resultado esperado, resultado actual, fecha aproximada y referencias relevantes. No deben copiarse claves API, contraseñas, tokens de sesión ni documentos personales completos en comentarios de soporte. Si el problema depende de un proveedor externo, debe registrarse esa dependencia antes de prometer un tiempo de resolución.
+
+## Disponibilidad y mantenimiento
+
+PeopleFlow puede programar ventanas de mantenimiento para tareas que afecten servicios compartidos. Cuando una intervención pueda generar indisponibilidad relevante, se comunica mediante los canales configurados. Durante una degradación parcial, algunas funciones pueden seguir disponibles mientras otras presentan demoras.
+
+Si una acción tarda más de lo habitual, el usuario no debería repetirla múltiples veces sin verificar el resultado, especialmente en procesos como importaciones, exportaciones o sincronizaciones. Repetir una operación puede crear trabajo duplicado aunque la interfaz haya demorado en actualizarse.
+
+Después de una interrupción, soporte debe confirmar el estado del servicio y revisar tareas que hayan quedado pendientes. Una notificación de mantenimiento no reemplaza la auditoría de operaciones críticas. Las consultas sobre disponibilidad histórica deben responderse con la información registrada para el incidente correspondiente.
+
+## Política local y excepciones
+
+Las reglas configuradas para una organización pueden variar por país, convenio, entidad legal o grupo de empleados. Cuando este documento indique que una condición depende de la política local, la respuesta correcta es consultar la política asignada al empleado en PeopleFlow y no extrapolar reglas de otra población.
+
+RR.HH. puede registrar excepciones cuando la organización lo autorice. Toda excepción relevante debe indicar motivo, responsable y, cuando corresponda, vigencia. Una excepción aplicada a una persona no modifica automáticamente la política general.
+
+Si dos reglas parecen entrar en conflicto, prevalece la configuración vigente y específica para la población afectada, siempre que haya sido publicada correctamente. Soporte no debe inventar una resolución basada en casos anteriores. Cuando la configuración no permite determinar la regla aplicable, el caso debe escalarse a RR.HH. o al administrador responsable.

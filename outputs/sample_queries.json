@@ -1,0 +1,98 @@
+[
+  {
+    "user_question": "¿Cómo solicito vacaciones?",
+    "system_answer": "Para solicitar vacaciones, debes ir a Mi tiempo > Nueva solicitud. Allí, el sistema calculará tu saldo disponible y deberás indicar la fecha de inicio y la fecha de finalización. Antes de enviarla, PeopleFlow mostrará la cantidad de días que se descontará y te advertirá si hay un conflicto con alguna ausencia ya registrada.",
+    "chunks_related": [
+      {
+        "chunk_id": "33c863424e2f8a95",
+        "section_title": "Vacaciones",
+        "relevance_score": 0.5617,
+        "content": "Vacaciones\n\nLas vacaciones se solicitan desde Mi tiempo > Nueva solicitud. El sistema calcula el saldo disponible según país, antigüedad, política asignada y movimientos previamente registrados. La solicitud debe indicar fecha de inicio y fecha de finalización. Antes de enviarla, PeopleFlow muestra la cantidad de días que se descontará y advierte si existe un conflicto con una ausencia ya registrada.  \nLa solicitud llega al líder directo y queda aprobada únicamente después de su confirmación. Si el líder tiene un aprobador delegado activo, la tarea se deriva de acuerdo con las reglas de delegación. Una solicitud aprobada puede cancelarse hasta cuarenta y ocho horas antes de la fecha de inicio, salvo que la política local determine otro plazo. Cuando ya comenzó el período solicitado, la cancelación requiere intervención de RR.HH.  \nPeopleFlow no permite aprobar una solicitud si el saldo resultante viola una restricción configurada, a menos que RR.HH. tenga habilitada una excepción. Toda excepción debe incluir motivo y queda registrada en auditoría."
+      },
+      {
+        "chunk_id": "d0cd4a9cda345358",
+        "section_title": "Otras ausencias y permisos",
+        "relevance_score": 0.3569,
+        "content": "Otras ausencias y permisos\n\nAdemás de vacaciones y licencias, una organización puede configurar permisos por estudio, mudanza, trámites, duelo, matrimonio u otros motivos. Cada tipo de ausencia define si consume saldo, si requiere aprobación, si exige documentación y qué personas pueden visualizar el motivo.  \nCuando una ausencia no requiere aprobación, puede quedar confirmada inmediatamente después de enviarse. Si requiere aprobación, sigue el flujo asignado a la política. Los tipos de ausencia con información sensible pueden mostrar al líder únicamente que la persona no estará disponible, sin exponer el detalle del motivo.  \nRR.HH. puede desactivar un tipo de ausencia para nuevas solicitudes sin eliminar registros históricos. Si un empleado intenta solicitar un tipo que no está disponible para su país o política, PeopleFlow debe informar que no se encuentra habilitado y mostrar solamente las opciones vigentes para esa persona."
+      },
+      {
+        "chunk_id": "c185fed096a28ca9",
+        "section_title": "Saldo de vacaciones y ajustes",
+        "relevance_score": 0.3483,
+        "content": "Saldo de vacaciones y ajustes\n\nEl saldo de vacaciones se compone de acreditaciones, consumos, ajustes y, cuando corresponda, arrastres de períodos anteriores. El empleado puede consultar el detalle desde Mi tiempo > Saldos. Un saldo negativo solo es posible cuando la política asignada permite anticipar días futuros.  \nRR.HH. puede realizar ajustes manuales para corregir migraciones, errores históricos o situaciones autorizadas. Cada ajuste debe indicar cantidad, fecha efectiva y motivo. Los líderes pueden consultar el saldo de su equipo si cuentan con permiso, pero no pueden modificarlo.  \nSi la política de vacaciones cambia, el efecto sobre saldos existentes depende de la configuración de vigencia. PeopleFlow no recalcula automáticamente períodos históricos cuando una nueva política comienza a regir, salvo que RR.HH. ejecute un proceso de recálculo explícito. Ante diferencias entre el saldo mostrado y los registros históricos, soporte debe revisar movimientos y política asignada antes de modificar valores."
+      }
+    ]
+  },
+  {
+    "user_question": "¿Qué hago si pierdo el acceso al segundo factor de autenticación?",
+    "system_answer": "Si pierdes el dispositivo utilizado como segundo factor de autenticación, no debes desactivar la autenticación multifactor (MFA) sin una verificación de identidad previa. Un administrador de seguridad puede reiniciar la configuración desde Seguridad > MFA, y esta acción quedará registrada en auditoría. Después del reinicio, deberás registrar un nuevo dispositivo en tu siguiente inicio de sesión.",
+    "chunks_related": [
+      {
+        "chunk_id": "27cdcc34329d825f",
+        "section_title": "Autenticación multifactor",
+        "relevance_score": 0.4664,
+        "content": "Autenticación multifactor\n\nLa autenticación multifactor, o MFA, puede ser obligatoria para administradores y opcional para otros roles según la política de cada organización. Cuando está habilitada, el usuario inicia sesión con su contraseña y luego confirma un segundo factor mediante la aplicación autenticadora configurada. Los códigos de recuperación se muestran una sola vez durante el alta y deben almacenarse de forma segura.  \nSi una persona pierde el dispositivo utilizado como segundo factor, no debe desactivarse MFA sin una verificación de identidad previa. Un administrador de seguridad puede reiniciar la configuración desde Seguridad > MFA, pero la acción queda registrada en auditoría. Después del reinicio, el usuario deberá registrar un nuevo dispositivo en su siguiente inicio de sesión. PeopleFlow no permite que soporte vea códigos MFA, secretos de autenticación ni códigos de recuperación existentes."
+      },
+      {
+        "chunk_id": "b76fd3f84af9e968",
+        "section_title": "Acceso y contraseñas",
+        "relevance_score": 0.3151,
+        "content": "Acceso y contraseñas\n\nPara restablecer una contraseña, la persona debe seleccionar “Olvidé mi contraseña” en la pantalla de inicio de sesión. PeopleFlow envía un enlace de un solo uso al correo laboral registrado. El enlace vence a los treinta minutos y deja de ser válido inmediatamente después de utilizarse. Si el correo no llega, soporte debe verificar que la cuenta exista, que la dirección registrada sea correcta, que el dominio de correo no haya rechazado el mensaje y que la cuenta no se encuentre bloqueada.  \nUna cuenta se bloquea temporalmente después de cinco intentos fallidos consecutivos. Un administrador autorizado puede desbloquearla desde Seguridad > Usuarios bloqueados. Soporte nunca debe solicitar la contraseña actual del empleado ni enviar contraseñas por correo, chat o tickets. Si la persona ya no tiene acceso a su correo laboral, la identidad debe verificarse por el procedimiento interno antes de cambiar la dirección asociada a la cuenta."
+      },
+      {
+        "chunk_id": "428df16275d3d71f",
+        "section_title": "Seguridad y auditoría",
+        "relevance_score": 0.1818,
+        "content": "Seguridad y auditoría\n\nLa auditoría registra eventos relevantes como creación y desactivación de usuarios, cambios de rol, exportaciones, inicios de sesión, reinicios de MFA, modificaciones de configuración y acciones administrativas. Los eventos incluyen fecha, usuario, acción y origen cuando esa información está disponible.  \nSolo administradores autorizados pueden consultar el registro completo. La existencia de permisos administrativos no habilita a modificar o eliminar eventos históricos de auditoría. Ante un incidente de acceso, soporte debe revisar la auditoría antes de cambiar permisos, restaurar una cuenta o asumir que hubo una falla de la plataforma.  \nLas acciones de soporte que modifiquen acceso o datos sensibles deben poder asociarse a un ticket o motivo interno. La auditoría ayuda a reconstruir qué ocurrió, pero no reemplaza controles preventivos como permisos mínimos, MFA y revisión periódica de accesos."
+      }
+    ]
+  },
+  {
+    "user_question": "¿Cómo puedo importar empleados mediante un archivo CSV?",
+    "system_answer": "La importación masiva de empleados se realiza desde Administración > Importar empleados. Debes utilizar un archivo en formato CSV UTF-8 que incluya las columnas obligatorias definidas por la plantilla, como nombre, apellido, correo, país, fecha_ingreso y rol. Es recomendable descargar la plantilla desde PeopleFlow para asegurarte de que los nombres de las columnas y los formatos sean correctos. Antes de confirmar la importación, el sistema mostrará una vista previa clasificando las filas como válidas, inválidas o potencialmente actualizables. Al finalizar, recibirás un reporte con las filas creadas, actualizadas y rechazadas, junto con el motivo de cada rechazo.",
+    "chunks_related": [
+      {
+        "chunk_id": "f176905590befb73",
+        "section_title": "Importación masiva por CSV",
+        "relevance_score": 0.6364,
+        "content": "Importación masiva por CSV\n\nLa importación masiva de empleados se realiza desde Administración > Importar empleados. El archivo debe utilizar formato CSV UTF-8 e incluir las columnas obligatorias definidas por la plantilla, entre ellas nombre, apellido, correo, país, fecha_ingreso y rol. La plantilla descargable desde PeopleFlow debe utilizarse como referencia para nombres de columnas y formatos.  \nAntes de confirmar, el sistema muestra una vista previa y clasifica las filas en válidas, inválidas o potencialmente actualizables. Un correo laboral ya existente no crea automáticamente un duplicado; la fila se informa para revisión o actualización según el modo seleccionado. Los errores de una fila no deben impedir necesariamente procesar las demás.  \nAl finalizar, PeopleFlow genera un reporte con filas creadas, actualizadas y rechazadas, junto con el motivo de cada rechazo. Para cargas grandes se recomienda conservar el archivo fuente y el reporte de resultado hasta verificar que la importación sea correcta."
+      },
+      {
+        "chunk_id": "c06b875d2642e121",
+        "section_title": "Exportaciones",
+        "relevance_score": 0.2572,
+        "content": "Exportaciones\n\nLas exportaciones se encuentran disponibles únicamente para usuarios con permiso específico. Dependiendo del módulo, PeopleFlow permite exportar listados de empleados, ausencias, reportes o resultados de procesos en CSV. Los filtros visibles en pantalla se aplican antes de generar el archivo.  \nUna exportación puede contener datos personales, por lo que el permiso de visualización no implica necesariamente permiso de exportación. El evento queda registrado en auditoría con usuario, fecha, módulo y tipo de exportación. Los archivos generados deben almacenarse de acuerdo con las políticas internas de la organización.  \nSi un usuario no ve el botón Exportar, soporte debe comprobar su rol y permisos antes de asumir que existe un error técnico. Cuando el conjunto de datos es muy grande, la generación puede ejecutarse en segundo plano y el usuario recibe una notificación cuando el archivo está disponible."
+      },
+      {
+        "chunk_id": "2f1cc43639282c3d",
+        "section_title": "Recibos y comprobantes de nómina",
+        "relevance_score": 0.1954,
+        "content": "Recibos y comprobantes de nómina\n\nLos recibos se consultan desde Mi perfil > Recibos cuando la organización tiene habilitado el módulo correspondiente. PeopleFlow puede recibir archivos desde una integración de nómina o mediante una carga autorizada de RR.HH. Cada recibo queda asociado a un empleado y a un período.  \nUn colaborador solo puede acceder a sus propios recibos. Un líder no obtiene acceso a los recibos de su equipo por el solo hecho de ser líder. Los administradores tampoco deben descargar documentación salarial si su rol no incluye el permiso específico.  \nSi un recibo no aparece, soporte debe revisar primero si el período fue publicado, si el empleado está correctamente asociado y si la sincronización finalizó sin errores. PeopleFlow no debe crear valores salariales faltantes ni inferir importes a partir de períodos anteriores. Las correcciones deben realizarse en la fuente autorizada y luego sincronizarse nuevamente."
+      }
+    ]
+  },
+  {
+    "user_question": "¿Puede un líder modificar el saldo de vacaciones de su equipo?",
+    "system_answer": "No, un líder no puede modificar el saldo de vacaciones de su equipo.",
+    "chunks_related": [
+      {
+        "chunk_id": "c185fed096a28ca9",
+        "section_title": "Saldo de vacaciones y ajustes",
+        "relevance_score": 0.5023,
+        "content": "Saldo de vacaciones y ajustes\n\nEl saldo de vacaciones se compone de acreditaciones, consumos, ajustes y, cuando corresponda, arrastres de períodos anteriores. El empleado puede consultar el detalle desde Mi tiempo > Saldos. Un saldo negativo solo es posible cuando la política asignada permite anticipar días futuros.  \nRR.HH. puede realizar ajustes manuales para corregir migraciones, errores históricos o situaciones autorizadas. Cada ajuste debe indicar cantidad, fecha efectiva y motivo. Los líderes pueden consultar el saldo de su equipo si cuentan con permiso, pero no pueden modificarlo.  \nSi la política de vacaciones cambia, el efecto sobre saldos existentes depende de la configuración de vigencia. PeopleFlow no recalcula automáticamente períodos históricos cuando una nueva política comienza a regir, salvo que RR.HH. ejecute un proceso de recálculo explícito. Ante diferencias entre el saldo mostrado y los registros históricos, soporte debe revisar movimientos y política asignada antes de modificar valores."
+      },
+      {
+        "chunk_id": "33c863424e2f8a95",
+        "section_title": "Vacaciones",
+        "relevance_score": 0.4067,
+        "content": "Vacaciones\n\nLas vacaciones se solicitan desde Mi tiempo > Nueva solicitud. El sistema calcula el saldo disponible según país, antigüedad, política asignada y movimientos previamente registrados. La solicitud debe indicar fecha de inicio y fecha de finalización. Antes de enviarla, PeopleFlow muestra la cantidad de días que se descontará y advierte si existe un conflicto con una ausencia ya registrada.  \nLa solicitud llega al líder directo y queda aprobada únicamente después de su confirmación. Si el líder tiene un aprobador delegado activo, la tarea se deriva de acuerdo con las reglas de delegación. Una solicitud aprobada puede cancelarse hasta cuarenta y ocho horas antes de la fecha de inicio, salvo que la política local determine otro plazo. Cuando ya comenzó el período solicitado, la cancelación requiere intervención de RR.HH.  \nPeopleFlow no permite aprobar una solicitud si el saldo resultante viola una restricción configurada, a menos que RR.HH. tenga habilitada una excepción. Toda excepción debe incluir motivo y queda registrada en auditoría."
+      },
+      {
+        "chunk_id": "d0cd4a9cda345358",
+        "section_title": "Otras ausencias y permisos",
+        "relevance_score": 0.3119,
+        "content": "Otras ausencias y permisos\n\nAdemás de vacaciones y licencias, una organización puede configurar permisos por estudio, mudanza, trámites, duelo, matrimonio u otros motivos. Cada tipo de ausencia define si consume saldo, si requiere aprobación, si exige documentación y qué personas pueden visualizar el motivo.  \nCuando una ausencia no requiere aprobación, puede quedar confirmada inmediatamente después de enviarse. Si requiere aprobación, sigue el flujo asignado a la política. Los tipos de ausencia con información sensible pueden mostrar al líder únicamente que la persona no estará disponible, sin exponer el detalle del motivo.  \nRR.HH. puede desactivar un tipo de ausencia para nuevas solicitudes sin eliminar registros históricos. Si un empleado intenta solicitar un tipo que no está disponible para su país o política, PeopleFlow debe informar que no se encuentra habilitado y mostrar solamente las opciones vigentes para esa persona."
+      }
+    ]
+  }
+]
