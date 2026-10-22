@@ -4,3 +4,6 @@
 .pytest_cache/
 *.py[cod]
 storage/chroma/
+
+# Local reference assets
+references/
